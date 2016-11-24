@@ -1,0 +1,73 @@
+*{
+    padding: 0;margin: 0;font-size: 12px;list-style: none;
+}
+a:hover{
+    text-decoration: none;
+}
+#topBar{
+    width: 100%;height: 48px;background: #fffff;position: fixed;top: 0;z-index: 100;background: white;
+    .col-xs-3{z-index: 100;
+        a{            
+                color:#888888;font-size: 18px;line-height: 48px;     
+        }
+    }
+    p{
+        position: absolute;top: 0;left: 0;text-align: center;font-size: 18px;font-weight: bold;
+        width: 100%;line-height: 48px;
+    }
+    .header_border{
+        position: absolute;bottom: 0;width: 100%;height: 1px;background: #888888;
+        transform: scaleY(0.4);
+    }
+}
+.shoucang_nav{
+    position: fixed;top: 48px;height: 48px;border-bottom: 1px #ccc solid;overflow: hidden; z-index: 101;
+    background-color: #FFF;
+    ul{
+       
+        width: 100%;height: 100%;position: absolute;left: 50%;transform: translateX(-35%);padding: 0 10px;
+        li{
+            width: 23%;height: 100%;line-height: 48px;float: left;text-align: center;font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+#wrapper{
+    width: 100%;position: absolute;top: 96px;bottom: 1px;
+}
+.shoucang_con{
+    width: 100%;position: absolute;
+}
+ .news_list_box{
+        width: 100%;overflow: hidden;margin-top: 10px;background: white;
+        border-bottom: #ccc 1px solid; padding: 10px 16px 5px;
+        .news_list_title{
+            width: 100%;overflow: hidden;    margin-bottom: 10px;
+           font-size: 18px;
+        }
+        .news_list_img_box{
+            overflow: hidden; margin-bottom: 10px;
+            img{width:32%;padding-right: 5px; overflow: hidden; float: left;}
+        }
+        .news_list_icon{
+            width: 100%;overflow: hidden;
+            div{
+                padding: 0; text-align: left;
+            }
+            div:nth-child(2){
+               text-indent: -10px;
+            }
+            div:last-child{
+                text-align: right;
+            }
+        }
+    }
+    .changge_title{
+        width: 50%;float: left;
+    }
+    .changge_img{
+        width: 50%;float: right;
+        img{
+            width: 100%;
+        }
+    }

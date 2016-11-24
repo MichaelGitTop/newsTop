@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+	<header>
+		<ul>
+			<li ng-click="classify(obj,$index)" ng-repeat="obj in newsType" ng-bind="obj.newsType" id="{{$index}}"></li>
+		</ul>
+		<div class="plus"><i class="fa fa-plus"></i></div>
+	</header>
+</body>
+</html>

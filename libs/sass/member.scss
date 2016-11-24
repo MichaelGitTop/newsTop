@@ -1,0 +1,150 @@
+*{
+    margin:0;padding:0;font-size: 12px;list-style: none;
+}
+body{
+    overflow: hidden;width: 100%;height: 100%;background:#fbfbfb; z-index: 1;
+}
+a:hover{
+    text-decoration: none;
+}
+footer{
+    position: fixed;bottom: 0;height: 56px;width: 100%;z-index: 2;
+}
+header{
+    position: absolute;top: 0;width: 100%;height: 1px;z-index: 2;
+}
+ #wrapper{
+     left:0;right: 0; position: absolute;top:0px;bottom: 56px;z-index: 1;
+     .user_container{
+         width: 100%;position: absolute;
+         .memberTitle{
+            background: #F44A4E;
+            padding: 40px 0 15px 0;
+            p{margin: 0;}
+             .user_icon{
+                 width: 70px;height: 70px;border-radius: 50%;background: #FDF9F7;margin: 0 auto;
+                position: relative;overflow: hidden;
+                 .icon_head{
+                     width: 25px;height: 25px;border-radius: 50%;background: #E4E3E1;position: absolute;
+                     top:20%;left: 50%;transform: translateX(-50%);
+                 }
+                 .icon_foot{
+                     width: 60px;height: 60px;border-radius: 50%;background: #E4E3E1;position: absolute;
+                     top: 65%;left: 50%;transform: translateX(-50%);
+                    
+                 }
+             }
+            h3{
+                text-align: center;font-weight: bold;color: white;
+            }
+            .login_text{
+                font-size: 14px;text-align: center;font-weight: bold;color: #FEE67E;
+            }
+         }
+        .user_nav{
+            background: white;height: 70px;padding: 0;border-bottom: #ccc 1px solid;
+                li{
+                    text-align: center;
+                }
+                li:first-child{
+                    height: 40px;
+                    line-height: 60px;
+                }
+            .favorite{
+                height: 100%;border-right: #ccc 1px solid;position: relative;
+                .favorite_star{
+                    color: #56B2FF;
+                }
+                .favorite_text{
+                    font-size: 14px;font-weight: bold;
+                }
+                 
+            }
+            .card{
+                border-right: #ccc 1px solid;height: 100%;
+
+                    .card_icon{
+                        color: #FF9900;
+                    }
+                    .card_text{
+                        font-size: 14px;font-weight: bold;
+                    }
+                
+            }        
+            .mall{
+                border-right: #ccc 1px solid;height: 100%;
+
+                    .mall_icon{
+                        color: #99CC36;
+                    }
+                    .mall_text{
+                        font-size: 14px;font-weight: bold;
+                    }
+                
+            }          
+        }
+     }
+ }
+.h20{
+    height: 20px;width: 100%;overflow: hidden;background: #F8F8F8;
+}
+.message{
+    height: 70px;background: white;border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;
+    .message_icon{
+        float: left;line-height: 70px;color: purple;
+    }
+    .message_arrow{
+        float: right;line-height: 70px;
+    }
+    .message_text{
+        line-height: 70px;font-size: 20px;font-weight: bold;margin-left: 20px;
+    }
+}
+.invite{
+    height: 70px;background: white;border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;
+    .invite_icon{
+        float: left;line-height: 70px;color: #36CD9B;
+    }
+    .invite_text{
+        line-height: 70px;font-size: 20px;font-weight: bold;margin-left: 20px;
+    }
+    .invite_right{
+        float: right;
+        .invite_left{
+            font-size: 14px;line-height: 70px;color: #F99396;font-weight: bold;
+        }
+        .invite_arrow{
+            line-height: 70px;
+        }
+    }
+}
+.history_read{
+    height: 70px;background: white;
+    .history_read_icon{
+        float: left;line-height: 70px;color: #58B3FF;
+    }
+    .history_read_arrow{
+        float: right;line-height: 70px;
+    }
+    .history_read_text{
+        line-height: 70px;font-size: 20px;font-weight: bold;margin-left: 20px;
+    }
+}
+.taskcenter{
+    height: 70px;background: white;border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;
+    .taskcenter_icon{
+        float: left;line-height: 70px;color: #36CD9B;
+    }
+    .taskcenter_text{
+        line-height: 70px;font-size: 20px;font-weight: bold;margin-left: 20px;
+    }
+    .taskcenter_right{
+        float: right;
+        .taskcenter_left{
+            font-size: 14px;line-height: 70px;color: #F99396;font-weight: bold;
+        }
+        .taskcenter_arrow{
+            line-height: 70px;
+        }
+    }
+}

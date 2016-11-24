@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!--JQuery加载-->
+    <script src="libs/plug/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--MUI加载-->
+    <script src="libs/js/mui.min.js"></script>
+    <!--Angular引用-->
+    <script src="libs/plug/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/plug/angular-sanitize.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--本页JS引用-->
+    <script src="libs/js/news_detail.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--MUI CSS-->
+    <link href="libs/css/mui.min.css" rel="stylesheet"/>
+    <!--本页CSS-->
+    <link rel="stylesheet" type="text/css" href="libs/css/news_detail.css"/>
+    <!--Bootstrap font-awesome-->
+    <link rel="stylesheet" type="text/css" href="libs/plug/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/plug/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="ctrl">
+	<header>
+		<ul class="row">
+			<li class="col-xs-2"><a href="javascript:history.go(-1)"><i class="fa fa-angle-left"></i></a></li>
+			<li class="col-xs-8"><a href="javascript:history.go(-1)" style="color: #FFF; text-decoration: none;">返回</a></li>
+			<li class="col-xs-2" ng-click="reading()"><i class="fa fa-font"></i></li>
+		</ul>
+	</header>
+	
+	<div class="readingOut" ng-click="reading_out()">
+		<i class="fa fa-mail-reply"></i>
+	</div>
+	
+	<div class="m_container">
+		<div class="title" ng-bind="news.title"></div>
+		<div class="time_form">
+			<span ng-bind="news.pubDate"></span>
+			<span ng-bind="'来源：'+news.source"></span>
+		</div>
+		<div class="content" ng-bind-html="news.html"></div>
+		<div class="clear10"></div>
+		<span class="errors">我要报错</span>
+		<div class="clear10"></div>
+		<div class="share_title">
+			<div class="line"></div>
+			<div class="share_content">分享有好礼</div>
+			<div class="line"></div>
+		</div>
+		<div class="clear10"></div>
+		<ul class="row share">
+			<li class="col-xs-3"><div><p><img src="libs/img/pyq.png"/></p><p>微信朋友圈</p></div></li>
+			<li class="col-xs-3"><div><p><img src="libs/img/weixin.png"/></p><p>微信好友</p></div></li>
+			<li class="col-xs-3"><div><p><img src="libs/img/qq.png"/></p><p>QQ好友</p></div></li>
+			<li class="col-xs-3"><div><p><img src="libs/img/more.png"/></p><p>更多</li>
+		</ul>
+	</div>
+	
+	<footer>
+		<ul class="row">
+			<li class="col-xs-6"><input type="text" placeholder="写评论，得积分！"/></li>
+			<li class="col-xs-2"><i class="fa fa-commenting-o"><div class="comment_count">8</div></i></li>
+			<li class="col-xs-2"><i class="fa fa-star-o" ng-class="collected ? 'fa fa-star active' : 'fa fa-star-o' " ng-click="collect()"></i></li>
+			<li class="col-xs-2"><i class="fa fa-share-alt"></i></li>
+		</ul>
+		
+	</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人中心</title>
+		<link href="libs/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="libs/plug/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/plug/font-awesome-4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="libs/css/member.css" />
+
+		<script src="libs/plug/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/plug/iscroll/iscroll/build/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/common.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<header></header>
+		<div id="wrapper">
+			<div class="user_container">
+				<div class="memberTitle">
+					<div class="user_icon">
+						<div class="icon_head"></div>
+						<div class="icon_foot"></div>
+					</div>
+					<h3>请登录</h3>
+					<p class="login_text">登录赚取积分,兑现金</p>
+				</div>
+
+				<div class="col-xs-12 user_nav">
+					<div class="col-xs-4 favorite">
+						<a href="collected.html">
+							<ul style="height: 100%;width: 100%;">
+								<li ><span class="fa fa-star fa-2x favorite_star"></span></li>
+								<li >
+									<p class="favorite_text">收藏</p>
+								</li>
+							</ul>
+						</a>
+					</div>
+					<div class="col-xs-4 card">
+						<ul>
+							<li ><span class="fa fa-credit-card-alt fa-2x card_icon"></span></li>
+							<li >
+								<p class="card_text">钱包</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-4 mall">
+						<ul>
+							<li ><span class="fa fa-shopping-bag fa-2x mall_icon"></span></li>
+							<li >
+								<p class="mall_text">商城</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="h20"></div>
+				<div class="col-xs-12 message">
+					<span class="fa fa-commenting-o fa-2x message_icon"></span>
+					<span class="message_text">消息</span>
+					<span class="fa fa-chevron-right fa-2x message_arrow"></span>
+				</div>
+				<div class="h20"></div>
+				<div class="col-xs-12 invite">
+					<span class="fa fa-user fa-2x invite_icon"></span>
+					<span class="invite_text">邀请码</span>
+					<span class="invite_right"><span class="invite_left">输入好友邀请码送积分</span><span class="fa fa-chevron-right fa-2x invite_arrow"></span></span>
+				</div>
+				<div class="col-xs-12 history_read">
+					<span class="fa fa-clock-o fa-2x history_read_icon"></span>
+					<span class="history_read_text">历史阅读</span>
+					<span class="fa fa-chevron-right fa-2x history_read_arrow"></span>
+				</div>
+				<div class="col-xs-12 taskcenter">
+					<span class="fa fa-check-square fa-2x taskcenter_icon"></span>
+					<span class="taskcenter_text">任务中心</span>
+					<span class="taskcenter_right"><span class="taskcenter_left">签到赚积分</span><span class="fa fa-chevron-right fa-2x taskcenter_arrow"></span></span>
+				</div>
+				<div class="col-xs-12 history_read">
+					<span class="fa fa-clock-o fa-2x history_read_icon"></span>
+					<span class="history_read_text">离线阅读</span>
+					<span class="fa fa-chevron-right fa-2x history_read_arrow"></span>
+				</div>
+			</div>
+
+		</div>
+		<footer></footer>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			myScroll = new IScroll('#wrapper', {
+				mouseWheel: true,
+				click: true
+			});
+			$('footer').load('footer.html')
+		})
+	</script>
+
+</html>

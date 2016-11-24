@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="libs/css/common.css" rel="stylesheet"/>
+    <link href="libs/css/mui.min.css" rel="stylesheet"/>
+    <link href="libs/plug/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/plug/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="libs/css/newSearch.css" rel="stylesheet" />
+    
+    <script src="libs/js/mui.min.js"></script>
+    <script src="libs/plug/angular.min.js"></script>
+    <script src="libs/plug/jquery-2.1.1.min.js"></script>
+    <script src="libs/plug/iscroll/iscroll/build/iscroll.js"></script>
+    <script src="libs/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/js/newSearch.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div id="lk_header">
+		<div class="search">
+			<div class="search_contect">
+				<div class="search_con">
+					<input type="text" placeholder="搜索你感兴趣的内容" id="search_input" ng-model="getVal"/>
+				</div>
+			</div>
+			<div class="search_btn"><button ng-click="searchStart()">搜索</button></div>
+		</div>
+	</div>
+	<div id="lk_container">
+		<div id="wrapper">
+			<div id="scroller">
+				<div class="in_container">
+					<div class="hot_topic">
+						<h1>热门搜索</h1>
+						<div id="nav">
+							<div ng-repeat="x in getDatas" id="x.id">
+								<a ng-href="x.href">{{ x.title }}</a>
+							</div>
+						</div>
+					</div>
+					<div class="search_record">
+						<h1>搜索记录</h1>
+						<div id="title">
+							<div><a href="#">何炅被送进医院</a><span id="remove" >×</span></div>
+							<div ng-repeat="k in arr1"><a href="#">{{ k }}</a><span id="remove" ng-click="aa($index)">×</span></div>
+						</div>
+						<div id="removeAll" ng-click="removeAll()"><span>清除历史记录</span></div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div id="lk_footer">	
+	</div>
+</body>
+</html>

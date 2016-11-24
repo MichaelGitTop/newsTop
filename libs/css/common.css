@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  list-style: none;
+  font-family: "microsoft yahei"; }
+
+header {
+  position: fixed;
+  width: 100%;
+  line-height: 48px;
+  height: 48px;
+  overflow-x: auto;
+  overflow-y: hidden; }
+  header ul {
+    width: 3012px;
+    overflow: hidden;
+    background-color: #F44B50;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+    header ul li {
+      height: 48px;
+      padding: 0 10px;
+      font-size: 20px;
+      text-align: center;
+      color: #feeeed;
+      float: left; }
+    header ul .active {
+      font-size: 22px;
+      color: #FFF; }
+  header .plus {
+    width: 50px;
+    height: 48px;
+    background-color: #F44B50;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10; }
+    header .plus i {
+      font-size: 20px;
+      line-height: 52px;
+      color: #FFF; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 56px;
+  background-color: #F9F9F9;
+  border-top: 1px solid #E6E6E6;
+  width: 100%;
+  overflow: hidden; }
+  footer ul li {
+    text-align: center;
+    line-height: 82px;
+    font-size: 16px;
+    color: #999999;
+    position: relative; }
+    footer ul li i {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 26px !important;
+      color: #999999; }
+
+/*# sourceMappingURL=common.css.map */

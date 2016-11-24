@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>新闻收藏</title>
+		<link rel="stylesheet" type="text/css" href="libs/plug/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/plug/font-awesome-4.6.3/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/css/collected.css"/>
+		
+		<script src="libs/plug/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/plug/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/plug/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/js/collected.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="app" ng-controller="ctrl">
+		<div id="topBar">
+			<div class="col-xs-3" >
+				<a href="javascript:history.go(-1)"><span class="fa fa-chevron-left"></span>返回	</a>			
+			</div>
+			<p>我的收藏</p>
+		<div class="header_border"></div>
+		</div>
+		<div class="col-xs-12 shoucang_nav">
+			<ul>
+				<li style="border-bottom: 3px solid #F44D52;color: #F44D52;">咨询</li>
+				<li>图片</li>
+				<li>新闻</li>
+			</ul>
+		</div>
+		<div id="wrapper">
+			<div class="shoucang_con">
+				<div class="news_list_box" ng-repeat="obj in data">
+					<div class="news_list_title" ng-bind="obj.title" ng-click="show_detail(obj)"></div>
+					<div class="news_list_img_box" >
+						<img ng-src="{{obj.imageurls[0].url}}" ng-if="obj.imageurls[0].url">
+						<img ng-src="{{obj.imageurls[1].url}}" ng-if="obj.imageurls[1].url">
+						<img ng-src="{{obj.imageurls[2].url}}" ng-if="obj.imageurls[2].url">
+					</div>
+					<div class="news_list_icon">
+						<div class="from col-xs-4" >来源：<span ng-bind="obj.source"></span></div>
+						<div class="time col-xs-5" ng-bind="obj.pubDate"></div>
+						<div class="close col-xs-3" ><i class="fa fa-close" ng-click="remove($index)"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

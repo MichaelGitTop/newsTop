@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>头条新闻</title>
+    <link rel="stylesheet" href="libs/plug/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/plug/font-awesome-4.6.3/css/font-awesome.min.css" />
+    <link href="libs/css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="libs/css/common.css" />
+    <link rel="stylesheet" href="libs/css/index.css" />
+    
+    
+    <script src="libs/js/mui.min.js"></script>
+    <script type="text/javascript" src="libs/plug/jquery-2.1.1.min.js" ></script>
+    <script type="text/javascript" src="libs/plug/angular.min.js" ></script>
+    <script type="text/javascript" src="libs/plug/angular-sanitize.min.js" ></script>
+    <script type="text/javascript" src="libs/plug/iscroll/iscroll/build/iscroll.js" ></script>
+    <script src="libs/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="libs/js/index.js" ></script>
+ 
+   
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+	<header></header>
+	<div class="icon"><img src="libs/img/loading.gif"/></div>
+	<div class="loading"></div>
+	<div class="news_container">
+		<div class="scroll">
+			<div class="news_list_box" ng-repeat="obj in data" >
+				<div class="news_list_title" ng-bind="obj.title" ng-click="show_detail(obj)"></div>
+				<div class="news_list_img_box">
+					<img ng-src="{{obj.imageurls[0].url}}">
+					<img ng-src="{{obj.imageurls[1].url}}">
+					<img ng-src="{{obj.imageurls[2].url}}">
+				</div>
+				<div class="news_list_icon">
+					<div class="from " ng-bind="'来源：'+obj.source"></div>
+					<div class="time " ng-bind="obj.pubDate"></div>
+					<div class="close " ng-click="closeNews($index)"><i class="fa fa-close"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+</body>
+</html>
